@@ -37,9 +37,16 @@ export default function App() {
         rightIcon={searchButton}
         value={text}
         onChangeText={setText} />
+      {/* <View>
+        <pre>{JSON.stringify(data, null, 2)}</pre>
+      </View> */}
       <View style={styles.linha}>
-        <Text style={styles.rotulo}>Preço Atual:</Text>
+        <Text style={styles.rotulo}>Price:</Text>
         <Text style={styles.conteudo}>{data.c}</Text>
+      </View>
+      <View style={styles.linha}>
+        <Text style={styles.rotulo}>%:</Text>
+        <Text style={styles.conteudo}>{data.P}</Text>
       </View>
       <StatusBar style="auto" />
     </View>
@@ -55,12 +62,13 @@ const styles = StyleSheet.create({
   },
   rotulo: {
     fontWeight: 'bold',
-    fontSize: 24
+    fontSize: 18
   },
   conteudo: {
-    fontSize: 24
+    fontSize: 18
   },
   linha: {
-    flexDirection: 'row'
+    flexDirection: 'row',
+    margin: 8,
   }
 });
